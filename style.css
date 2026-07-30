@@ -1,34 +1,33 @@
-body {
-
-    font-family: Arial, sans-serif;
-
-    margin: 0;
-
-    background: #f4f4f4;
-
-    color: black;
-
+* {
+    box-sizing: border-box;
 }
-
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
+
+body {
+
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: #1d1d1f;
+
+}
 
 
 
 header {
 
-    background: #222;
+    position: sticky;
+    top: 0;
 
-    color: white;
+    background: rgba(255, 255, 255, 0.8);
 
-    padding: 20px;
+    backdrop-filter: blur(10px);
 
+    padding: 20px 50px;
 
     display: flex;
 
@@ -36,29 +35,51 @@ header {
 
     align-items: center;
 
+    border-bottom: 1px solid #ddd;
+
 }
 
 
+
+header h1 {
+
+    font-size: 24px;
+
+}
 
 
 
 nav a {
 
-    color: white;
-
-    margin: 10px;
+    margin: 15px;
 
     text-decoration: none;
+
+    color: #1d1d1f;
 
 }
 
 
 
+nav a:hover {
+
+    color: #0071e3;
+
+}
+
 
 
 button {
 
-    padding: 10px 15px;
+    border: none;
+
+    background: #0071e3;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
 
     cursor: pointer;
 
@@ -66,170 +87,110 @@ button {
 
 
 
+button:hover {
+
+    opacity: 0.8;
+
+}
+
 
 
 .hero {
 
-
     text-align: center;
 
-    padding: 80px 20px;
-
-
-}
-
-
-
-
-
-.shop {
-
-
-    text-align: center;
-
-    padding: 40px;
-
+    padding: 120px 20px;
 
 }
 
 
 
+.hero h2 {
 
+    font-size: 60px;
 
-input {
-
-
-    padding: 12px;
-
-    width: 250px;
-
+    margin-bottom: 20px;
 
 }
 
 
 
+.hero p {
 
+    font-size: 25px;
+
+    color: #555;
+
+}
 
 
 
 .products {
 
-
     display: flex;
 
     justify-content: center;
 
-    gap: 20px;
+    gap: 30px;
 
     flex-wrap: wrap;
 
-    margin-top: 30px;
-
-
 }
-
-
-
-
 
 
 
 .card {
 
+    background: #f5f5f7;
 
-    background: white;
+    width: 280px;
 
-    width: 200px;
+    padding: 40px;
 
-    padding: 20px;
+    border-radius: 25px;
 
+    text-align: center;
 
-    border-radius: 10px;
-
-
-    box-shadow: 0px 0px 10px gray;
-
+    transition: 0.3s;
 
 }
 
 
 
+.card:hover {
 
-
-.card button {
-
-
-    background: black;
-
-    color: white;
-
+    transform: translateY(-10px);
 
 }
 
 
+
+.card h3 {
+
+    font-size: 25px;
+
+}
 
 
 
 .contact {
 
-
     text-align: center;
 
-    padding: 80px 20px;
+    padding: 100px;
 
 }
-
-
 
 
 
 footer {
 
-
-    position: fixed;
-
-
-    bottom: 0;
-
-
-    background: #222;
-
+    background: #000;
 
     color: white;
-
-
-    width: 100%;
-
 
     text-align: center;
 
-
-}
-
-
-
-
-
-.dark {
-
-
-    background: #121212;
-
-    color: white;
-
-
-}
-
-
-
-
-
-.dark .card {
-
-
-    background: #333;
-
-    color: white;
-
+    padding: 20px;
 
 }
