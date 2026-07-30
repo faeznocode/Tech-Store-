@@ -1,25 +1,25 @@
-let cart = 0;
+let cart = [];
 
 
+function addCart(product, price) {
 
-function addCart() {
+    cart.push({
+        name: product,
+        price: price
+    });
 
-    cart = cart + 1;
 
-
-    document.getElementById("cart").innerHTML = cart;
-
+    updateCart();
 
 }
 
 
 
+function updateCart() {
 
-function toggleDarkMode() {
+    let cartDisplay = document.getElementById("cart");
 
-
-    document.body.classList.toggle("dark");
-
+    cartDisplay.innerHTML = cart.length;
 
 }
 
