@@ -6,17 +6,18 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: white;
     color: #1d1d1f;
-
+    transition: 0.3s;
 }
 
 
+/* =====================
+   NAVBAR
+===================== */
 
 header {
 
@@ -37,8 +38,9 @@ header {
 
     border-bottom: 1px solid #ddd;
 
-}
+    z-index: 100;
 
+}
 
 
 header h1 {
@@ -46,7 +48,6 @@ header h1 {
     font-size: 24px;
 
 }
-
 
 
 nav a {
@@ -57,8 +58,9 @@ nav a {
 
     color: #1d1d1f;
 
-}
+    transition: 0.3s;
 
+}
 
 
 nav a:hover {
@@ -68,6 +70,9 @@ nav a:hover {
 }
 
 
+/* =====================
+   BUTTONS
+===================== */
 
 button {
 
@@ -83,17 +88,23 @@ button {
 
     cursor: pointer;
 
-}
+    transition: 0.3s;
 
+}
 
 
 button:hover {
 
     opacity: 0.8;
 
+    transform: scale(1.05);
+
 }
 
 
+/* =====================
+   HERO SECTION
+===================== */
 
 .hero {
 
@@ -102,7 +113,6 @@ button:hover {
     padding: 120px 20px;
 
 }
-
 
 
 .hero h2 {
@@ -114,6 +124,12 @@ button:hover {
 }
 
 
+.hero h3 {
+
+    font-size: 35px;
+
+}
+
 
 .hero p {
 
@@ -124,6 +140,9 @@ button:hover {
 }
 
 
+/* =====================
+   PRODUCTS
+===================== */
 
 .products {
 
@@ -135,8 +154,9 @@ button:hover {
 
     flex-wrap: wrap;
 
-}
+    padding: 50px;
 
+}
 
 
 .card {
@@ -156,13 +176,11 @@ button:hover {
 }
 
 
-
 .card:hover {
 
     transform: translateY(-10px);
 
 }
-
 
 
 .card h3 {
@@ -172,6 +190,9 @@ button:hover {
 }
 
 
+/* =====================
+   CONTACT
+===================== */
 
 .contact {
 
@@ -182,15 +203,137 @@ button:hover {
 }
 
 
+/* =====================
+   FOOTER
+===================== */
 
 footer {
 
-    background: #000;
+    background: black;
 
     color: white;
 
     text-align: center;
 
     padding: 20px;
+
+}
+
+
+/* =====================
+   DARK MODE
+===================== */
+
+
+.dark {
+
+    background: #000;
+
+    color: white;
+
+}
+
+
+.dark header {
+
+    background: rgba(20, 20, 20, 0.8);
+
+    border-bottom: 1px solid #333;
+
+}
+
+
+.dark header h1 {
+
+    color: white;
+
+}
+
+
+.dark nav a {
+
+    color: white;
+
+}
+
+
+.dark nav a:hover {
+
+    color: #0071e3;
+
+}
+
+
+.dark .hero p {
+
+    color: #cccccc;
+
+}
+
+
+.dark .card {
+
+    background: #1c1c1e;
+
+    color: white;
+
+}
+
+
+.dark .card h3 {
+
+    color: white;
+
+}
+
+
+.dark .contact {
+
+    color: white;
+
+}
+
+
+.dark footer {
+
+    background: #111;
+
+}
+
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+
+@media(max-width:768px) {
+
+    header {
+
+        padding: 20px;
+
+        flex-direction: column;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 18px;
+
+    }
+
+
+    .products {
+
+        padding: 20px;
+
+    }
 
 }
