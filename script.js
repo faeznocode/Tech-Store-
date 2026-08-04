@@ -33,11 +33,17 @@ function updateCart() {
 
         cartDisplay.innerHTML += `
 
-            <p>
-                ${cart[i].name} - $${cart[i].price}
-            </p>
+    <p>
 
-        `;
+        ${cart[i].name} - $${cart[i].price}
+
+        <button onclick="removeCart(${i})">
+            Remove
+        </button>
+
+    </p>
+
+    `;
 
 
         total += cart[i].price;
@@ -121,5 +127,13 @@ function showMessage() {
 function toggleDarkMode() {
 
     document.body.classList.toggle("dark");
+
+}
+
+function removeCart(index) {
+
+    cart.splice(index, 1);
+
+    updateCart();
 
 }
