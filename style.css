@@ -351,3 +351,81 @@ footer {
     }
 
 }
+
+/* =====================
+   SHOPPING CART
+===================== */
+
+
+footer {
+
+    margin-top: 50px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #f5f5f7;
+
+    color: #1d1d1f;
+
+}
+
+
+
+#cartItems {
+
+    max-width: 500px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+#cartItems p {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+.dark footer {
+
+    background: #111;
+
+}
+
+
+.dark #cartItems {
+
+    background: #1c1c1e;
+
+    color: white;
+
+}
+
+
+.dark #cartItems p {
+
+    border-color: #444;
+
+    color: white;
+
+}
+
+.dark footer h2,
+.dark footer h3 {
+
+    color: white;
+
+}

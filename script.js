@@ -17,9 +17,36 @@ function addCart(product, price) {
 
 function updateCart() {
 
-    let cartDisplay = document.getElementById("cart");
+    let cartDisplay = document.getElementById("cartItems");
 
-    cartDisplay.innerHTML = cart.length;
+    let totalDisplay = document.getElementById("total");
+
+
+    cartDisplay.innerHTML = "";
+
+
+    let total = 0;
+
+
+    for (let i = 0; i < cart.length; i++) {
+
+
+        cartDisplay.innerHTML += `
+
+            <p>
+                ${cart[i].name} - $${cart[i].price}
+            </p>
+
+        `;
+
+
+        total += cart[i].price;
+
+    }
+
+
+    totalDisplay.innerHTML = total;
+
 
 }
 
