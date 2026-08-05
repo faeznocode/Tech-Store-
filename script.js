@@ -3,10 +3,29 @@ let cart = [];
 
 function addCart(product, price) {
 
-    cart.push({
-        name: product,
-        price: price
-    });
+
+    let existingProduct = cart.find(item => item.name === product);
+
+
+    if (existingProduct) {
+
+        existingProduct.quantity++;
+
+    }
+
+    else {
+
+        cart.push({
+
+            name: product,
+
+            price: price,
+
+            quantity: 1
+
+        });
+
+    }
 
 
     updateCart();
@@ -35,7 +54,26 @@ function updateCart() {
 
     <p>
 
-        ${cart[i].name} - $${cart[i].price}
+       ${cart[i].name}
+
+<br>
+
+Quantity: ${cart[i].quantity}
+
+<br>
+
+Price: $${cart[i].price * cart[i].quantity}
+
+<br>
+
+<button onclick="increaseQuantity(${i})">
+    +
+</button>
+
+
+<button onclick="decreaseQuantity(${i})">
+    -
+</button>
 
         <button onclick="removeCart(${i})">
             Remove
@@ -136,4 +174,22 @@ function removeCart(index) {
 
     updateCart();
 
+}
+
+function increaseQuantity(index) {
+
+    cart[index].quantity++;
+
+    updateCart();
+
+}
+
+function decreaseQuantity(index) {
+    cart[index].quantity--;
+
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+
+    updateCart();
 }
